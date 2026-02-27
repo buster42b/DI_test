@@ -1,4 +1,7 @@
-interface IEquipment
+namespace PlayerSingleton
 {
-    void AddItem(Item item);
+    public interface IEquipment
+    {
+        void AddItem(Item item);
+    }
 }

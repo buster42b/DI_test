@@ -1,28 +1,32 @@
-public class Player
+namespace PlayerSingleton
 {
-    private static Player _instance;
-    public int Health { get; set; }
-    public int Lives { get; set; }
-    public string Nickname { get; set; }
-
-    public string[] Skills { get; set; }
-                
-    public Equipment Equipment { get; set; }
-
-    public Player()
+    public class Player
     {
-        _instance = this;
-    }
+        private static Player _instance;
+        public int Health { get; set; }
+        public int Lives { get; set; }
+        public string Nickname { get; set; }
 
-    public static Player Instance
-    {
-        get
+        public string[] Skills { get; set; }
+
+        public Equipment Equipment { get; set; }
+
+        public Player()
         {
-            if (_instance == null)
+            _instance = this;
+        }
+
+        public static Player Instance
+        {
+            get
             {
-                _instance = new Player();
+                if (_instance == null)
+                {
+                    _instance = new Player();
+                }
+
+                return _instance;
             }
-            return _instance;
         }
     }
 }

@@ -1,11 +1,15 @@
 using System.Collections.Generic;
+using PlayerSingleton;
 
-public class Equipment : IEquipment
+namespace PlayerSingleton
 {
-    List<Item> items = new List<Item>();
-
-    public void AddItem(Item item)
+    public class Equipment : IEquipment
     {
-        items.Add(item);
+        List<Item> items = new List<Item>();
+
+        public void AddItem(Item item)
+        {
+            items.Add(item);
+        }
     }
 }
